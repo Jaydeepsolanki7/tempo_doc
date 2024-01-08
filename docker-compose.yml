@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - /rails/storage
+    environment:
+      DATABASE_URL: "sqlite3:/rails/storage/development.sqlite3"
